@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App 01: Word Counter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="header-icon">📝</div>
+      <div>
+        <h1>Word Counter</h1>
+        <p class="subtitle">Count words, characters, sentences, and paragraphs in real time.</p>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <div class="card">
+        <label for="textInput" class="form-label">Enter or paste your text below:</label>
+        <textarea id="textInput" class="form-textarea" rows="8" placeholder="Type or paste your text here to see real-time statistics..."></textarea>
+
+        <div class="button-row">
+          <button id="btnClear" class="btn btn-outline-danger">Clear</button>
+          <button id="btnSample" class="btn btn-secondary">Load Sample Text</button>
+          <button id="btnCopy" class="btn btn-primary">Copy Text</button>
+        </div>
+
+        <div id="toast" class="toast"></div>
+
+        <div class="stats-section">
+          <h2 class="section-title">Live Statistics</h2>
+          <div class="stats-grid">
+            <div class="stat-box">
+              <span class="stat-number" id="wordCount">0</span>
+              <span class="stat-label">Words</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number" id="charWithSpaces">0</span>
+              <span class="stat-label">Characters (with spaces)</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number" id="charNoSpaces">0</span>
+              <span class="stat-label">Characters (no spaces)</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number" id="sentenceCount">0</span>
+              <span class="stat-label">Sentences</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number" id="paragraphCount">0</span>
+              <span class="stat-label">Paragraphs</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number" id="readingTime">0 min</span>
+              <span class="stat-label">Estimated Reading Time</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <p>App 01: Word Counter &bull; Part of Text and Speech Analysis Suite</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
